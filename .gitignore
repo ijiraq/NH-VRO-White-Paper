@@ -1,0 +1,6 @@
+*.bbl
+*.aux
+*.blg
+*.log
+*.out
+.DS_Store

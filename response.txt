@@ -1,0 +1,115 @@
+Reviewer:
+
+The manuscript titled "An Extremely Deep Rubin Survey to
+Explore the Extended Kuiper Belt and Identify Objects Observable by
+New Horizons" proposes a Vera C. Rubin Observatory Deep Drilling
+micro-survey of the Kuiper Belt. Using the shift-and-stack technique,
+the survey aims to provide transformative measurements of the Kuiper
+Belt Object (KBO) size distribution, identify potential observation
+targets for the New Horizons mission's LORRI camera, and study KBO
+rotational properties across different distances, sizes, and orbital
+classes. The authors outline the survey plan in detail and discuss the
+potential scientific applications of the resulting data. The
+manuscript aligns well with the goals of the special issue on Rubin
+LSST Survey Strategy Optimization.
+
+However, the manuscript appears to have been prepared on a short
+timeline, and I have several suggestions to strengthen it before
+publication:
+
+Inconsistent Scheduling -
+
+The proposed survey schedule is inconsistent throughout the
+manuscript. The abstract states that observations will begin in summer
+2026, while Section 3.5 mentions, "A similar timeline for objects
+discovered in the July-August 2025 or 2026 oppositions by a Rubin
+micro-survey would be possible." I understand that the authors hope to
+start as early as possible, but given the current schedule of the Vera
+C. Rubin Observatory, a July-August 2025 start date is not
+feasible. The timeline should be clarified and made consistent
+throughout the manuscript.
+
+RESPONSE
+We have modified the text (copied below) to remove the schedule inconsistency.
+
+TEXT ADDED:
+
+A similar timeline for objects discovered {\bf in the 2026
+or the 2027 opposition} by a Rubin micro-survey would be possible, with
+rapid follow-up when the field passes through the HST field of regard,
+starting $\sim$45 days after discovery and lasting $\sim$50 days
+enabling LORRI observations as early as the spring of 2027 or 2028.
+The target field is observable for discovery in late September, and
+although unlikely, observations on 2 nights in September 2025,
+immediately after Science Verification, followed by rapid recovery of
+interesting targets with HST would enable New Horizons followup as
+early as late spring 2026.  The NHDDF would need to received 4 visits
+in 2026 to secure the orbits of the targets not observed by HST to
+achieve ground based science cases.
+
+
+Probability:
+
+Probability of Finding a New Horizons Flyby Target - In line 108, the
+manuscript states, "New Horizons is the only spacecraft currently
+operating in the Kuiper Belt, providing a once-in-a-generation
+opportunity to observe distant KBOs up close." Similarly, line 126
+mentions, "while providing a chance to find a new distant encounter
+target for the spacecraft to explore." These statements suggest that
+the survey might identify a new flyby target for New
+Horizons. However, Section 3 does not provide any explanation or
+estimation of the probability of this occurring. Including a
+quantitative assessment of the likelihood of finding such a target
+would strengthen the manuscript's claims. Since Figure 4 already
+presents relevant information, the authors should clarify whether it
+is possible to extract a numerical estimate from it.
+
+RESPONSE
+
+An encounter target probability requires knowledge of the delta-v available to the spacecraft, the spacecraft velocity, the time at which the delta-v is applied and the distance to the target when found.  From figure 4 we estimate that ~0.001 of the targets beyond 70 au will be encounter targets.  From section 2.3 the proposed survey anticipates detecting 10 and 70 objects at this distance resulting in an encounter expectation of between 0.01 and 0.7 targets depending on the actual distribution of the Kuiper Belt.  However, the putative distant belt is very ill defined.  The primary goal of this survey is to confirm the existence of a distant population with the chance of an encounter target.  We have added the following text to the manuscript at the end of section 2.3
+
+ADDED TEXT: 
+
+The chance that this survey could find an encounter target for New Horizons is difficult to assess without more precise knowledge of this putative distant population.  Should this distant population be confirmed the chance of finding an encounter target is significantly enhanced.  However, this enhanced distant population is only putatively detected and its orbital distribution is unknown.  Making a prediction of the encounter probability based on this imprecise knowledge is premature. 
+
+
+
+
+Light curves:
+
+
+Rotational Light Curves and Stacking Strategy - Section 2.5 discusses the use of rotational light curves. However, since a single 30s Rubin exposure reaches only ~24.5 mag at 5σ in the r band, it is unclear how many stacked exposures will be required to reach the stated threshold of r < 26 for sources at the 10σ limit (line 283). Additionally, as the micro-survey will only observe for five hours per night, obtaining shape information for all objects brighter than r = 26-particularly for slow rotators-seems overly optimistic. The claim that "This will provide some shape information for ~100 KBOs." should be better justified or revised to reflect a more realistic estimate.
+
+RESPONSE
+
+The concept is that a rolling window through the time series would allow likelihood based measurements of the amplitudes of light curves for these faint objects.  Measurement at 10-sigma of 26th mag sources will require approximately 150 exposures (based on the 5-sigma limit of 27.5 in 540 exposures).  This results in~4 independent time windows where sources fainter than 26th will be detected but also allows a '1.25 hour rolling window' of about 3.75 hours duration for measuring the light curve.  The expectation is to achieve 6 visits to the field resulting in 6*3.75 hours => 22.5 hours of time series for sources fainter than 26.0.  If the timing of the mid-observation for each visit is shifted by 1hr per night then each 2 visit window will receive 4.75 hours of monitoring.  The observations take weeks and months later will be further shifted in time, removing the 12 and 24 hour aliases from the light curves.  This the 22.5 hours of monitoring will provide 3 un-aliased samples of about 5 hours duration each.  Typical TNO rotation periods are 10-15 hours and three five hours samples will provide the minimum sampling needed.  
+
+MODIFIED TEXT:
+
+This will provide a sampling of the rotation amplitudes, and thus bulk shape information, for ~100 KBOs.
+
+
+SINGLE EXPOSURE DEPTH
+
+Depth of Single Exposures - In line 374, the manuscript states, "a single 30s exposure whose 5-σ limit was varied between 27 and 28.5 in r." This appears to be an error, as a single exposure will not reach such depths. The authors should clarify whether this is a typo or if the statement refers to stacked exposures rather than individual ones.
+
+RESPONSE
+
+We have modified the text to clarify how the simulation was run.
+
+MODIFIED TEXT:
+
+To ensure that \texttt{Sorcha} did not model in trailing losses we modeled the NHDDF observations as a series of visits to a single Rubin pointing where each visit consisted of a single 30s exposure whose 5-$\sigma$ limit was varied between $27$ and 28.5 in $r$ using \texttt{Sorcha's} fading function to express the shape of the detection efficiency curve setting the width to 0.15 and peak detection efficiency to 0.85 (to account for some area loss due to nearby bright stars).
+The short 30s exposure used to simulate our full stack depth ensured no trailing losses (which \texttt{Sorcha} simulates).
+In the real survey the detection is conducted using a shift-and-stack process on the actual 540 30-second exposures is done on a grid that mitigates trailing lost.    
+
+
+GRAMMAR:
+
+Grammar and Formatting Issues - There are incomplete sentences in line 270 ("At 70 au, objects that with r = 27 have Hr ∼ 8.5") and line 349 ("In addition, other deep survey's have not"). Additionally, there are missing commas, periods, and other typographical errors throughout the manuscript. A thorough proofreading is recommended to correct these issues and improve overall readability.
+
+
+RESPONSE:
+
+Thank-you.  We had some 'Latex formatting' issues with comments that have been corrected.  We have also done a thorough proof-read. 
+
